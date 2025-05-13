@@ -1,0 +1,125 @@
+                                /* Reset styles */
+                                
+                                * {
+                                    margin: 0;
+                                    padding: 0;
+                                    box-sizing: border-box;
+                                }
+                                
+                                body {
+                                    background: linear-gradient(to bottom right, #1c1c1e, #2c2c2e);
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 100vh;
+                                    font-family: 'Helvetica Neue', sans-serif;
+                                }
+                                /* Calculator container */
+                                
+                                .calculator {
+                                    background: rgba(8, 12, 8, 0.903);
+                                    border-radius: 25px;
+                                    padding: 4px;
+                                    /* max-width: 360px;*/
+                                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                /* Display */
+                                
+                                .display {
+                                    background-color: transparent;
+                                    color: rgb(255, 255, 255);
+                                    text-align: right;
+                                    padding: 20px 10px;
+                                    /* font-size: 2.5rem;*/
+                                    font-size: 2.3rem;
+                                    /* min-height: 20px;*/
+                                    height: 15%;
+                                    margin-bottom: 20px;
+                                    margin-top: 60px;
+                                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                                    word-wrap: break-word;
+                                    overflow-x: auto;
+                                }
+                                /* Button Grid */
+                                
+                                .buttons {
+                                    height: 70%;
+                                    display: grid;
+                                    grid-template-columns: repeat(4, 1fr);
+                                    gap: 2px;
+                                }
+                                /* Button Base */
+                                
+                                .btn {
+                                    padding: 4px;
+                                    font-size: 2rem;
+                                    /*padding: 18px;
+            font-size: 1.4rem;*/
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    background-color: #1d201d;
+                                    color: white;
+                                    transition: background-color 0.2s ease;
+                                }
+                                /* Zero Button spans 2 columns */
+                                
+                                .zero {
+                                    padding-left: 20px;
+                                    grid-column: span 2;
+                                    border-radius: 40px;
+                                    text-align: left;
+                                    /*padding-left: 24px;*/
+                                }
+                                /* Function Buttons */
+                                
+                                .function {
+                                    background-color: #a5a5a5;
+                                    color: black;
+                                }
+                                
+                                .function:hover {
+                                    background-color: #bcbcbc;
+                                }
+                                /* Operator Buttons */
+                                
+                                .operator {
+                                    background-color: #b55d00;
+                                    color: white;
+                                }
+                                
+                                .operator:hover {
+                                    background-color: #84661f;
+                                }
+                                /* Number hover effect */
+                                
+                                .btn:not(.function):not(.operator):hover {
+                                    background-color: #555;
+                                }
+                                /* Make text and button size smaller on small screens */
+                                
+                                @media (min-width: 600px) {
+                                    .calculator {
+                                        width: 70%;
+                                    }
+                                }
+                                
+                                @media (min-width: 786px) {
+                                    .calculator {
+                                        width: 60%;
+                                    }
+                                }
+                                
+                                @media (min-width: 900px) {
+                                    .calculator {
+                                        width: 45%;
+                                    }
+                                }
+                                
+                                @media (min-width: 1200px) {
+                                    .calculator {
+                                        width: 35%;
+                                    }
+                                }
